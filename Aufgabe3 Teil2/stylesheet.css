@@ -1,4 +1,14 @@
 /*stylesheet.css*/
-p {
-    background-color: #000000
+html {
+  background-color: #120C0C
+}
+
+header {
+    background-color: #6868FF
+}
+.texte{
+    color: #ffffff
+}
+html{
+    font-family: interstate
 }
