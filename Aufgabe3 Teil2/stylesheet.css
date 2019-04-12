@@ -12,7 +12,7 @@ body{
     font-family: anurati
 }
 header {
-    background-color: #0400ff
+    background-color: #0011FF
 }
 .texte {
     color: #ffffff;
@@ -23,13 +23,22 @@ header {
     color: #ffffff
 }
 .arti1{
-    background-color: #222222
+    background-color: #222222;
+    margin: 0px 70px 0px 70px
 }
 .arti2{
-    background-color: #313131
+    background-color: #313131;
+    margin: 0px 70px 0px 70px
 }
 .arti3{
-    background-color: #444444
+    background-color: #444444;
+    margin: 0px 70px 0px 70px
+}
+.asdf{
+    margin: 15px 0px 0px 0px
+}
+.nav2{
+    margin: 0.5px 12px 0px 12px;
 }
 ul{
     display: inline-block;
@@ -37,6 +46,9 @@ ul{
 li{
     max-width: 50%;
     display: inline-block;
+}
+.ghjk{
+    margin: 0px 0px 20px 0px
 }
 footer {
      background-color: #231C1C;
