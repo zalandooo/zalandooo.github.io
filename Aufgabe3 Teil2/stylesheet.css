@@ -1,14 +1,28 @@
 /*stylesheet.css*/
 html {
-  background-color: #120C0C
+  background-color: #120c0c;
+  font-family: dubai;
+  text-align: center
 }
-
+.titles {
+    font-size: 2em;
+    font-family: anurati
+}
 header {
-    background-color: #6868FF
+    background-color: #0400ff
 }
 .texte{
     color: #ffffff
 }
 html{
-    font-family: interstate
+    font-size: 1em
+    
+}
+ul{
+    display: inline-block;
+}
+li{
+    max-width: 50%;
+    display: inline-block;
+
 }
