@@ -11,8 +11,17 @@ html {
 header {
     background-color: #0400ff
 }
-.texte{
+.texte {
     color: #ffffff
+}
+.titles2 {
+    font-family: Bell MT;
+    font-size: 2em;
+    color: #ffffff
+}
+.arti{
+    background-color: #03011b
+}
 }
 html{
     font-size: 1em
@@ -24,5 +33,7 @@ ul{
 li{
     max-width: 50%;
     display: inline-block;
-
 }
+footer {
+     background-color: #231C1C
+ }
