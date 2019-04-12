@@ -19,9 +19,17 @@ header {
     font-size: 2em;
     color: #ffffff
 }
-.arti{
+.arti1{
     background-color: #03011b
 }
+.arti2{
+    background-color: #0400ff
+}
+.arti3{
+    background-color: rgb(9, 78, 78)
+}
+article{
+    max-width: 50%;
 }
 html{
     font-size: 1em
