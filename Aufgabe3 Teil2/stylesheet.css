@@ -2,7 +2,10 @@
 html {
   background-color: #120c0c;
   font-family: dubai;
-  text-align: center
+  font-size: 1em;
+}
+body{
+    text-align: center;
 }
 .titles {
     font-size: 2em;
@@ -12,7 +15,7 @@ header {
     background-color: #0400ff
 }
 .texte {
-    color: #ffffff
+    color: #ffffff;
 }
 .titles2 {
     font-family: Bell MT;
@@ -20,20 +23,13 @@ header {
     color: #ffffff
 }
 .arti1{
-    background-color: #03011b
+    background-color: #222222
 }
 .arti2{
-    background-color: #0400ff
+    background-color: #313131
 }
 .arti3{
-    background-color: rgb(9, 78, 78)
-}
-article{
-    max-width: 50%;
-}
-html{
-    font-size: 1em
-    
+    background-color: #444444
 }
 ul{
     display: inline-block;
@@ -43,5 +39,7 @@ li{
     display: inline-block;
 }
 footer {
-     background-color: #231C1C
+     background-color: #231C1C;
+     text-align: center;
+     font-family: fantasy
  }
