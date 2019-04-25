@@ -66,3 +66,13 @@ footer {
      font-family: fantasy;
      font-size: 13pt
  }
+
+
+img+article:first-letter
+div h3 {color:red}
+div>h3 {color:red}
+
+img[alt=blalblabla]
+a:hover {color:red}
+p::before
+:nth-last-child(
