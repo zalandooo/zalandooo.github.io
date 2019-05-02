@@ -69,13 +69,14 @@ footer {
  }
  .asideleft{
      position: absolute;
+     float: left;
      width: 20%;
      margin-left: 15%;
      font-size: 25px;
      font-family: dubai;
      color: #ff8800;
      text-align: left;
-     background-color: rgb(0, 7, 100)
+     background-color: #000764
  }
 
 
