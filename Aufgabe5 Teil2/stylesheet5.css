@@ -10,14 +10,13 @@ body{
 .maintitle{
     font-size: 4em;
     font-family: anurati;
-    color:white;
+    color:rgba(163, 119, 57, 0.788);
     text-align: center;
-    width: 100%
+    width: 100%;
+    background-color: #0000009d;
+    filter: opacity(80%);
 }
-.titles {
-    font-size: 2em;
-    font-family: anurati
-}
+
 header {
     background-color: #0011FF;
     width: 100%
@@ -35,25 +34,21 @@ header {
 }
 
 .subCCs {
-    background-color: #120c0c;
-    width: 30em;
-    height:30em;
+    background-color: #000000;
+    width: 15em;
+    height:15em;
     border: 1px solid #ffffff;
     overflow: auto;
     margin:2em;
-    padding: 0em;
+    padding: 5em;
 }
-.texte {
-    color: #ffffff;
-    width: 10%;
-    
-}
+
 .titles2 {
     font-family: Bell MT;
     font-size: 2em;
     color: #ffffff
 }
-.arti1{
+.arti0 {
     background-color: #222222;
     margin: 0px 70px 0px 70px;
     width: 90%
@@ -67,6 +62,13 @@ header {
     background-color: #444444;
     margin: 0px 70px 0px 70px;
     width: 90%
+}
+.arti1{
+    width: 10em;
+    text-align: left
+}
+.texte {
+    color: #ffffff
 }
 .asdf{
     margin: 15px 0px 0px 0px;
@@ -92,17 +94,10 @@ li{
     border-radius: 25px / 0px;
     padding: 10px;
     margin-bottom: 20px;
-    max-width: 20%
+    max-width: 70%
     
     
 }
-footer {
-     background-color: #863535;
-     text-align: center;
-     font-family: fantasy;
-     font-size: 13pt;
-     margin-top:200em;
- }
  .asideleft{
      position: absolute;
      float: left;
@@ -110,11 +105,19 @@ footer {
      max-height: 100%;
      font-size: 25px;
      font-family: Caviar Dreams;
-     color: #ff8800;
+     color: #000000;
      text-align: left;
-     background-color: #0011FF;
+     background-color:#A37739;     
  }
 main{
     max-width: 65%;
     float: right;
+}
+footer {
+    background-color: #863535;
+    text-align: center;
+    font-family: fantasy;
+    font-size: 13pt;
+    margin-top:200em;
+    width: 100%;
 }
