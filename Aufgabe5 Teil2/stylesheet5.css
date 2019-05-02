@@ -1,0 +1,78 @@
+/*stylesheet.css*/
+html {
+  background-color: #120c0c;
+  font-family: dubai;
+  font-size: 1em;
+}
+body{
+    text-align: center
+}
+.titles {
+    font-size: 2em;
+    font-family: anurati
+}
+header {
+    background-color: #0011FF
+}
+.texte {
+    color: #ffffff;
+    width: 90%
+}
+.titles2 {
+    font-family: Bell MT;
+    font-size: 2em;
+    color: #ffffff
+}
+.arti1{
+    background-color: #222222;
+    margin: 0px 70px 0px 70px;
+    width: 90%
+}
+.arti2{
+    background-color: #313131;
+    margin: 0px 70px 0px 70px;
+    width: 90%
+}
+.arti3{
+    background-color: #444444;
+    margin: 0px 70px 0px 70px;
+    width: 90%
+}
+.asdf{
+    margin: 15px 0px 0px 0px
+}
+.nav2{
+    margin: 0.5px 12px 0px 12px;
+}
+ul{
+    display: inline-block;
+    color: #ff8800
+}
+li{
+    max-width: 50%;
+    display: inline-block;
+}
+.ghjk{
+    border: 1px solid #2e1e1e ;
+    border-radius: 25px / 0px;
+    border: 0.1px solid #ffffff;
+    padding: 10px;
+    margin-bottom: 20px
+    
+}
+footer {
+     background-color: #863535;
+     text-align: center;
+     font-family: fantasy;
+     font-size: 13pt
+ }
+
+
+img+article:first-letter
+div h3 {color:red}
+div>h3 {color:red}
+
+img[alt=blalblabla]
+a:hover {color:red}
+p::before
+:nth-last-child(
