@@ -7,6 +7,13 @@ html {
 body{
     text-align: center
 }
+.maintitle{
+    font-size: 4em;
+    font-family: anurati;
+    color:white;
+    text-align: center;
+    width: 100%
+}
 .titles {
     font-size: 2em;
     font-family: anurati
@@ -15,9 +22,31 @@ header {
     background-color: #0011FF;
     width: 100%
 }
+.CC {
+    background-color: #120c0c;
+    width: 50em;
+    height:30em;
+    border: 1px solid #ffffff;
+    overflow: auto;
+    margin:2em;
+    padding: 0em;
+    
+
+}
+
+.subCCs {
+    background-color: #120c0c;
+    width: 30em;
+    height:30em;
+    border: 1px solid #ffffff;
+    overflow: auto;
+    margin:2em;
+    padding: 0em;
+}
 .texte {
     color: #ffffff;
-    width: 90%
+    width: 10%;
+    
 }
 .titles2 {
     font-family: Bell MT;
@@ -40,51 +69,52 @@ header {
     width: 90%
 }
 .asdf{
-    margin: 15px 0px 0px 0px
+    margin: 15px 0px 0px 0px;
 }
 .nav2{
     margin: 0.5px 12px 0px 12px;
 }
 ul{
     display: inline-block;
-    color: #ff8800
+    color: #ff8800;
 }
 li{
     max-width: 50%;
     display: inline-block;
 }
-.ghjk{
-    border: 1px solid #2e1e1e ;
+.emg {
     border-radius: 25px / 0px;
-    border: 0.1px solid #ffffff;
     padding: 10px;
-    margin-bottom: 20px
+    margin-bottom: 20px;
+
+}
+.ghjk{
+    border-radius: 25px / 0px;
+    padding: 10px;
+    margin-bottom: 20px;
+    max-width: 20%
+    
     
 }
 footer {
      background-color: #863535;
      text-align: center;
      font-family: fantasy;
-     font-size: 13pt
+     font-size: 13pt;
+     margin-top:200em;
  }
  .asideleft{
      position: absolute;
      float: left;
      width: 20%;
-     margin-left: 15%;
+     max-height: 100%;
      font-size: 25px;
-     font-family: dubai;
+     font-family: Caviar Dreams;
      color: #ff8800;
      text-align: left;
-     background-color: #000764
+     background-color: #0011FF;
  }
-
-
-img+article:first-letter
-div h3 {color:red}
-div>h3 {color:red}
-
-img[alt=blalblabla]
-a:hover {color:red}
-p::before
-:nth-last-child(
+main{
+    max-width: 65%;
+    float: right;
+}
