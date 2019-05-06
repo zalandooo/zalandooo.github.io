@@ -16,7 +16,7 @@ html {
 
 header {
     background-color: #0011FF;
-    width: 100%;
+    width: 99%;
     height: 5em;
     font-family: caviar dreams;
     
@@ -155,7 +155,7 @@ footer {
     text-align: center;
     font-family: caviar dreams bold;
     font-size: 15pt;
-    width: 100%;
+    width: 99%;
     clear: both;
     float: inline-end
 }
