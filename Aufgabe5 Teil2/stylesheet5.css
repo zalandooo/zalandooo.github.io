@@ -138,7 +138,7 @@ aside{
     transform: translateZ(0px);
     backface-visibility: hidden;
     transition-duration: 0.75s;   
-    width: 25%;
+    width: 20%;
     font-size: 25px;
     font-family: Caviar Dreams bold;
     color: #ffffff;
@@ -155,8 +155,9 @@ footer {
     text-align: center;
     font-family: caviar dreams bold;
     font-size: 15pt;
-    margin-top:85em;
     width: 100%;
+    clear: both;
+    float: inline-end
 }
 .footercolor {
     color: #000000
