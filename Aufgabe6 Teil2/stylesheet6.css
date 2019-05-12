@@ -577,6 +577,7 @@ li{
     }
     
 aside{
+       clear: both; 
        float: left;
        width: 15%;
        height: 15em;
@@ -590,7 +591,6 @@ aside{
   
 aside.asideleft:hover{
       transform: translateY(0px);
-      backface-visibility: hidden;
       transition-duration: 0.75s;   
       width: 20%;
       height: 14em;
@@ -599,7 +599,6 @@ aside.asideleft:hover{
       color: #ffffff;
       text-align: left;
       background-color:#A37739;
-      filter: opacity(75%);
       
     } 
 main{
