@@ -7,6 +7,9 @@ html {
   font-size: 1em;
 }
 
+.bckgr {
+    height: 130em
+}
 .emenü {
     float: left;
     width:65em;
@@ -22,7 +25,7 @@ html {
     height: 4em;
     font-family: caviar dreams;
     color: #A37739;
-    margin: 0.8em 0em 0em 1em
+
     
 }
 
@@ -47,15 +50,15 @@ html {
 }
 
 header {
-    background-color: #0011FF;
-    width: 99%;
+    background-color: #ffe600;
+    width: 100%;
     height: 5em;
     margin: 0em
     
 }
 
 .asdf{
-    margin: 0.5em 0em 0em 14em;
+    margin: 0.5em 0em 0em 10em;
     float: left
 
 }
@@ -180,180 +183,203 @@ footer {
     float: inline-end
 }
 .footercolor {
-    color: #000000
+    color: #000000;
 }
 
-@media screen and (min-width: 90em)/*tablet ansicht*/ {
+
+@media screen and (min-width: 26em) /*tablet ansicht*/ {
+
+
 html {
-    background-color: #000000;
-    font-family: dubai;
-    font-size: 1em;
-  }
+     background-color: #000000;
+     font-family: dubai;
+     font-size: 1em;
+}
+.emenü {
+     float: left;
+     width:65em;
+     height:40em;
+}
+.maintitle{
+     font-size: 4em;
+     font-family: anurati;
+     color:rgba(163, 119, 57, 0.788);
+     text-align: center;
+     width: 88%;
+     filter: opacity(80%);
+}
+.menu {
+     position: absolute;
+     float: left;
+     clear: both;
+     background:none;
+     overflow: hidden;
+     width: 4em;
+     height: 4em;
+     font-family: caviar dreams;
+     font-size: 14pt;
+     color: #A37739 ;
+     margin: 0.4em 0em 0em 1em;
+     text-align: left;
+    
+    }
+
+.menu:hover {
+     position: absolute;
+     background-color:#323648;
+     outline:none;
+     overflow: visible;
+     width: 8em;
+     height: 25.5em;
+     transition: all 0.8s ease-out;
+     font-family: caviar dreams;
+     color: #A37739;
+     text-align: left;
+    }
+
   
-  
-  .emenü {
-      float: left;
-      width:65em;
-      height:50em;
-  }
-  .menu {
-      position: absolute;
-      float: left;
-      clear: both;
-      background:none;
-      overflow: hidden;
-      width: 4em;
-      height: 4em;
-      font-family: caviar dreams;
-      color: #A37739;
-      margin: 0.8em 0em 0em 1em
-  }
-  
-  .menu:hover {
-      position: absolute;
-      background-color:#323648;
-      outline:none;
-      overflow: visible;
-      width: 6em;
-      height: 25.5em;
-      transition: all 0.8s ease-out;
-      font-family: caviar dreams;
-      font-size: 23pt;
-      color: #A37739;
-  }
-  
-  .maintitle{
-      font-size: 4em;
+.maintitle{
+      font-size: 3em;
       font-family: anurati;
       color:rgba(163, 119, 57, 0.788);
-      margin: -0.1em 0em 0em 0.94em
-  }
+      text-align: center;
+      width: 88%;
+      filter: opacity(80%);
+    }
   
-  header {
-      background-color: #0011FF;
-      width: 99%;
+header {
+      background-color: #d40000;
+      width: 100%;
       height: 5em;
-      margin: 0em
-      
-  }
-  
-  .asdf{
-      margin: 0.5em 0em 0em 16em;
-      float: left
-  
-  }
-  nav{
-  
+      font-family: caviar dreams;
+    }
+
+.asdf {
+      margin: 0.4em 1em 0em 3em;
+      float: right;
+    }
+
+nav {
+      text-align:right;
       width: 100%;
       margin: 1em 0em 0em 1em;
-  }
+    }
   
-  .nav2{
+.nav2{
       margin: 0.5px 12px 0px 12px;
-  }
-  ul{
+    }
+
+ul{
       display: inline-block;
       color: #A37739;
       font-size: 18pt;
       margin: 1.5em 2em 0em 0em;
   
-  }
-  li{
+    }
+li{
       max-width: 50%;
       display: inline-block;
-  }
+    }
+
+.CC {
+        background-color: #120c0c;
+        width: 95%;
+        height: 18em;
+        border: 1px solid #ffffff;
+        overflow: hidden;
+        float: left;
+        padding: 0.1em;
+        margin: 0.2em;
+        float: left;
+    }
   
-  .CC {
-      background-color: #120c0c;
-      width: 150%;
-      height: 8em;
-      border: 1px solid #ffffff;
-      overflow: hidden;
-      float: left;
-      padding: 0.1em;
-      margin: 0.2em;
-      float: left
-  }
-  
-  
-  .subCCs {
+.subCCs {
       background-color: #000000;
-      width: 150%;
+      width: 13em;
       height: 20em;
       border: 1px solid #ffffff;
       overflow: hidden;
       float: left;
+      clear: right;
       padding: 0.1em;
-      margin: 0.2em
-  }
-  .emgp {
-      width:13em;
-      height: 8em;
-      float:left;
-  }
+      margin-left: 0.2em;
+      margin-right: 0.2em;
+      margin-bottom: 0.2em;
+      margin-top: 0.2em
+    }
+    .emgp {
+        width:13em;
+        height: 8em;
+        float:left;
+    }
+.emgp:hover {
+      width: 100%;
+      height: 107%;
+    }
   
-  .arti0 {
+.arti0 {
       background-color: #222222;
       margin: 0.5em 0.5em 0em 0.5em;
       width: 35%;
       float: left;
   }
-  .arti2{
+.arti2{
       background-color: #313131;
       margin: 1.85em 0em 0em 0.5em;
       width: 35%;
       float: left
-  }
-  .arti3{
+    }
+.arti3{
       background-color: #444444;
       margin: 0.5em 0em 0em 0em;
       width: 63%;
-      float: left;
-  }
-  .arti1{
+      float: right;
+    }
+.arti1{
       margin: 1em 0em 0em 1em;
       width: 12em;
-      text-align: left
-  }
-  .texte {
+      text-align: center
+    }
+.texte {
       color: #ffffff
   }
   
-  .ghjk{
+.ghjk{
       max-width: 100%;
       
       
-  }
-  aside{
-  
-       color: #000000;
-       height:4em;
+    }
+aside {
+
+        color: #000000;
+        height:4em;
+        font-size: 15px;
+        color: #ffffff;
+        text-align: left;
+        background-color:#A37739;  
+        width: 95%;
+        float: left;
+        overflow: hidden;
+       }
+   
+aside.asideleft:hover{
+       transform: translateY(0px);
+       backface-visibility: hidden;
+       transition-duration: 0.75s;   
+       height:17em;
        font-size: 15px;
-       color: #ffffff;
+       color: #ffffff ;
        text-align: left;
-       background-color:#A37739;  
-       width: 150%;
-       float: left;
-       overflow: hidden;
-   }
-  
-   aside.asideleft:hover{
-      transform: translateY(0px);
-      backface-visibility: hidden;
-      transition-duration: 0.75s;   
-      height:17em;
-      font-size: 15px;
-      color: #ffffff;
-      text-align: left;
-      background-color:#A37739;
-      overflow: visible
-      
-   } 
-  main{
+       background-color:#A37739 ;
+       overflow: visible
+       
+    }
+
+main{
       max-width: 65%;
-      float: left;
-  }
-  footer {
+      float: right;
+    }
+footer {
       background-color: #A37739;
       text-align: center;
       font-family: caviar dreams bold;
@@ -361,61 +387,63 @@ html {
       width: 99%;
       clear: both;
       float: inline-end
-  }
-  .footercolor {
+    }
+.footercolor {
       color: #000000
-  }
+    }
 }
 
-@media screen and (min-width: 26em) /*pc ansicht*/ {
+    
+
+@media screen and (min-width: 62em) /*pc ansicht*/ 
+{
 
 html {
-    background-color: #000000;
-    font-family: dubai;
-    font-size: 1em;
+     background-color: #000000;
+     font-family: dubai;
+      font-size: 1em;
 }
-
-  .emenü {
-    float: left;
-    width:65em;
-    height:40em;
+.emenü {
+     float: left;
+     width:65em;
+     height:40em;
 }
 .maintitle{
-    font-size: 4em;
-    font-family: anurati;
-    color:rgba(163, 119, 57, 0.788);
-    text-align: center;
-    width: 88%;
-    filter: opacity(80%);
+     font-size: 4em;
+      font-family: anurati;
+        color:rgba(163, 119, 57, 0.788);
+        text-align: center;
+     width: 88%;
+     filter: opacity(80%);
 }
 .menu {
-    position: absolute;
-    float: left;
-    clear: both;
-    background:none;
-    overflow: hidden;
-    width: 4em;
-    height: 4em;
-    font-family: caviar dreams;
-    font-size: 16pt;
-    color: #A37739 ;
-    margin: 0.8em 0em 0em 1em;
-    text-align: left;
+     position: absolute;
+      float: left;
+       clear: both;
+       background:none;
+       overflow: hidden;
+        width: 4em;
+     height: 4em;
+      font-family: caviar dreams;
+      font-size: 16pt;
+      color: #A37739 ;
+       margin: 0.4em 0em 0em 1em;
+     text-align: left;
     
-}
+    }
 
 .menu:hover {
-    position: absolute;
-    background-color:#323648;
-    outline:none;
-    overflow: visible;
-    width: 8em;
-    height: 25.5em;
-    transition: all 0.8s ease-out;
-    font-family: caviar dreams;
-    color: #A37739;
-    text-align: left;
-}
+        position: absolute;
+        background-color:#323648;
+     outline:none;
+      overflow: visible;
+      width: 8em;
+        height: 25.5em;
+        transition: all 0.8s ease-out;
+     font-family: caviar dreams;
+     color: #A37739;
+     text-align: left;
+    }
 
   
 .maintitle{
@@ -425,39 +453,41 @@ html {
       text-align: center;
       width: 88%;
       filter: opacity(80%);
-}
+    }
   
 header {
       background-color: #0011FF;
-      width: 99%;
+      width: 100%;
       height: 5em;
       font-family: caviar dreams;
-      
-}
-  .asdf {
-      margin: 1.3em 0em 0em 3em;
+    }
+
+.asdf {
+      margin: 0.4em 1em 0em 3em;
       float: right;
-}
+    }
+
 nav {
       text-align:right;
       width: 100%;
       margin: 1em 0em 0em 1em;
-  }
+    }
   
 .nav2{
       margin: 0.5px 12px 0px 12px;
-  }
+    }
+
 ul{
       display: inline-block;
       color: #A37739;
       font-size: 18pt;
       margin: 1.5em 2em 0em 0em;
   
-  }
+    }
 li{
       max-width: 50%;
       display: inline-block;
-  }
+    }
   
 .CC {
       background-color: #120c0c;
@@ -469,7 +499,7 @@ li{
       padding: 1em;
       float: right;
       clear: left
-  }
+    }
   
   
 .subCCs {
@@ -485,16 +515,16 @@ li{
       margin-right: 0.2em;
       margin-bottom: 0.2em;
       margin-top: 0.2em
-  }
+    }
 .emgp {
       width: 55%;
       height: 60%;
       float:right;
-  }
+    }
 .emgp:hover {
       width: 100%;
       height: 107%;
-  }
+    }
   
 .arti0 {
       background-color: #222222;
@@ -507,18 +537,18 @@ li{
       margin: 1.85em 0em 0em 0.5em;
       width: 35%;
       float: left
-  }
+    }
 .arti3{
       background-color: #444444;
       margin: 0.5em 0em 0em 0em;
       width: 63%;
       float: right;
-  }
+    }
 .arti1{
       margin: 1em 0em 0em 1em;
       width: 12em;
       text-align: center
-  }
+    }
 .texte {
       color: #ffffff
   }
@@ -527,7 +557,7 @@ li{
       max-width: 100%;
       
       
-  }
+    }
 aside{
        float: left;
        width: 15%;
@@ -535,27 +565,27 @@ aside{
        font-family: Caviar Dreams;
        color: #000000;
        text-align: left;
-       background-color:#A37739;  
+       background-color:#A37739;
   
-}
+    }
   
 aside.asideleft:hover{
       transform: translateZ(0px);
       backface-visibility: hidden;
       transition-duration: 0.75s;   
       width: 20%;
-      height: 13em;
+      height: 11em;
       font-size: 28px;
-      font-family: Caviar Dreams bold;
+      font-family: Caviar Dreams;
       color: #ffffff;
       text-align: center;
       background-color:#A37739;
       
-} 
+    } 
 main{
-      max-width: 65%;
-      float: right;
-  }
+      max-width: 100%;
+      float: left;
+    }
 footer {
       background-color: #A37739;
       text-align: center;
@@ -564,7 +594,7 @@ footer {
       width: 99%;
       clear: both;
       float: inline-end
-}
+    }
 .footercolor {
       color: #000000
     }
