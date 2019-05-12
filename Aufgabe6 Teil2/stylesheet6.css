@@ -154,7 +154,6 @@ aside {
      width: 150%;
      float: left;
      overflow: hidden;
-     filter: opacity(70%)
     }
 
 aside.asideleft:hover {
@@ -167,7 +166,6 @@ aside.asideleft:hover {
      text-align: left;
      background-color:#A37739 ;
      overflow: visible;
-     filter: opacity(75%)
     
 } 
 main{
@@ -411,7 +409,7 @@ footer {
 html {
      background-color: #000000;
      font-family: dubai;
-      font-size: 1em;
+     font-size: 1em;
 }
 
 .bckgr {
@@ -448,13 +446,13 @@ html {
     }
 
 .menu:hover {
-        position: absolute;
-        background-color:#323648;
+     position: absolute;
+     background-color:#323648;
      outline:none;
-      overflow: visible;
-      width: 8em;
-        height: 25.5em;
-        transition: all 0.8s ease-out;
+     overflow: visible;
+     width: 8em;
+     height: 25.5em;
+     transition: all 0.8s ease-out;
      font-family: caviar dreams;
      color: #A37739;
      text-align: left;
@@ -487,6 +485,7 @@ nav {
       text-align:right;
       width: 100%;
       margin: 1em 0em 0em 1em;
+      position: absolute
     }
   
 .nav2{
@@ -498,6 +497,7 @@ ul{
       color: #A37739;
       font-size: 18pt;
       margin: 1.5em 2em 0em 0em;
+      position: absolute
   
     }
 li{
