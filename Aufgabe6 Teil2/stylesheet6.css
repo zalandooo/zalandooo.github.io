@@ -155,6 +155,7 @@ aside {
      width: 150%;
      float: left;
      overflow: hidden;
+     filter: opacity(70%)
     }
 
 aside.asideleft:hover {
@@ -166,8 +167,8 @@ aside.asideleft:hover {
      color: #ffffff ;
      text-align: left;
      background-color:#A37739 ;
-     overflow: visible
-     
+     overflow: visible;
+     filter: opacity(75%)
     
 } 
 main{
