@@ -23,6 +23,7 @@ html {
     overflow: hidden;
     width: 4em;
     height: 4em;
+    margin: 0.6em 0em 0em 1em;
     font-family: caviar dreams;
     color: #A37739;
 
@@ -58,8 +59,8 @@ header {
 }
 
 .asdf{
-    margin: 0.5em 0em 0em 10em;
-    float: left
+    margin: 0.5em 1em 0em 0em;
+    float: right
 
 }
 nav{
@@ -223,7 +224,7 @@ html {
      font-family: caviar dreams;
      font-size: 14pt;
      color: #A37739 ;
-     margin: 0.4em 0em 0em 1em;
+     margin: 0.5em 0em 0em 1em;
      text-align: left;
     
     }
@@ -288,7 +289,7 @@ li{
 .CC {
         background-color: #120c0c;
         width: 150%;
-        height: 8em;
+        height: 24.3em;
         border: 1px solid #ffffff;
         overflow: hidden;
         float: left;
@@ -314,26 +315,27 @@ li{
         float:left;
     }
 .emgp:hover {
-      width: 100%;
-      height: 90%;
+     width: 100%;
+     height: 90%;
+     transition: all 0.4s ease;
     }
-  
 .arti0 {
       background-color: #222222;
       margin: 0.5em 0.5em 0em 0.5em;
-      width: 35%;
+      width: 48%;
+      height: 50%;
       float: left;
   }
 .arti2{
       background-color: #313131;
       margin: 1.85em 0em 0em 0.5em;
-      width: 35%;
+      width: 98%;
       float: left
     }
 .arti3{
       background-color: #444444;
       margin: 0.5em 0em 0em 0em;
-      width: 63%;
+      width: 98%;
       float: right;
     }
 
@@ -359,11 +361,11 @@ aside {
 
         color: #000000;
         height:4em;
-        font-size: 15px;
+        font-size: 15pt;
         color: #ffffff;
         text-align: left;
         background-color:#A37739;  
-        width: 100%;
+        width: 150%;
         float: left;
         overflow: hidden;
        }
@@ -372,12 +374,13 @@ aside.asideleft:hover{
        transform: translateY(0px);
        backface-visibility: hidden;
        transition-duration: 0.75s;   
-       height:17em;
-       font-size: 15px;
+       height:6em;
+       font-size: 20pt;
        color: #ffffff ;
        text-align: left;
        background-color:#A37739 ;
-       overflow: visible
+       overflow: visible;
+       filter: opacity(75%);
        
     }
 
@@ -421,24 +424,24 @@ html {
 }
 .maintitle{
      font-size: 4em;
-      font-family: anurati;
-        color:rgba(163, 119, 57, 0.788);
-        text-align: center;
+     font-family: anurati;
+     color:rgba(163, 119, 57, 0.788);
+     text-align: center;
      width: 88%;
      filter: opacity(80%);
 }
 .menu {
      position: absolute;
-      float: left;
-       clear: both;
-       background:none;
-       overflow: hidden;
-        width: 4em;
+     float: left;
+     clear: both;
+     background:none;
+     overflow: hidden;
+     width: 4em;
      height: 4em;
-      font-family: caviar dreams;
-      font-size: 16pt;
-      color: #A37739 ;
-       margin: 0.4em 0em 0em 1em;
+     font-family: caviar dreams;
+     font-size: 16pt;
+     color: #A37739 ;
+     margin: 0.4em 0em 0em 1em;
      text-align: left;
     
     }
@@ -594,6 +597,7 @@ aside.asideleft:hover{
       color: #ffffff;
       text-align: left;
       background-color:#A37739;
+      filter: opacity(75%);
       
     } 
 main{
