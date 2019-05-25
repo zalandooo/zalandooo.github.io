@@ -1,5 +1,5 @@
+//Konsolenausgabetest
 console.log("Test The Toast!");
-//Console.log//
 //Alert//
 window.onload = geladen;
 function geladen() {
@@ -10,7 +10,6 @@ function geladen() {
     document.getElementById('button1').addEventListener("click", onClick);
     document.getElementById('button2').addEventListener("click", ButtonZwo);
     document.getElementById("toast").addEventListener("mouseover", mouseover);
-    document.getElementById("b3").addEventListener("mouseover", hoverbutton);
     Stringnumber();
 }
 //Buttons
@@ -43,12 +42,13 @@ function Stringnumber() {
     console.log(n1 + n2);
     console.log(n2 + n2);
 }
+window.onmouseover = hoverlabel;
+hoverlabel();
 //Neues HTML-Element über Toastscript
-document.getElementById("b3").addEventListener("mouseover", hoverbutton);
-function hoverbutton() {
-    let testbutton = document.createElement("b3");
-    testbutton.innerHTML = "Neu";
-    testbutton.addEventListener("click", hoverbutton);
-    document.getElementById("b3").appendChild(testbutton);
+document.getElementById("label").addEventListener("mouseover", hoverlabel);
+function hoverlabel() {
+    let hoverlabel = document.createElement("label");
+    hoverlabel.innerHTML = "Butter! Bitte noch mehr Budder!!!";
+    document.getElementById("label").appendChild(hoverlabel);
 }
 //# sourceMappingURL=script.js.map
