@@ -61,7 +61,7 @@ window.onmouseover = hoverlabel
 document.getElementById("label").addEventListener("mouseover", hoverlabel)
     function hoverlabel (){
     let hoverlabel:HTMLElement = document.createElement("label")
-    hoverlabel.innerHTML = "Butter! Bitte noch mehr Budder!!!"
+    hoverlabel.innerHTML = "Butter! Bidde noch mehr Budder!!!"
     document.getElementById("label").appendChild(hoverlabel)
 
 }
