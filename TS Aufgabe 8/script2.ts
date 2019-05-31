@@ -4,6 +4,10 @@ console.log("TEST");
 
 document.getElementById("target-id").innerHTML
 
+
+
+
+//Vorlesung
 var number = 2;
 viarable1 = Math.random (variable1)
 
