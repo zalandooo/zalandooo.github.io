@@ -1,3 +1,7 @@
+//Konsolenausgabetest
+
+console.log("TEST");
+
 document.getElementById("target-id").innerHTML
 
 var number = 2;
