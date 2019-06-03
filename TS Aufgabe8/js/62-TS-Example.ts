@@ -13,7 +13,7 @@ interface Monster {
 let monsterHolder : string = "monsterHoldingCell";                                 
 let playerName : string = "Spielername";                                           
 let playerXP : number = 0;                                                          
-let playerXPperLevel : number = 500;                                                
+let playerXPperLevel : number = 999;                                                
 let playerItems : string = "Laser-Nagelknipser"
 
 // Arrays

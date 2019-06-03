@@ -2,7 +2,7 @@
 let monsterHolder = "monsterHoldingCell";
 let playerName = "Spielername";
 let playerXP = 0;
-let playerXPperLevel = 500;
+let playerXPperLevel = 999;
 let playerItems = "Laser-Nagelknipser";
 // Arrays
 let prefix = ["Gurkengesichtige(s)-", "Toastessende(s)-", "Frühstücks-", "Mega-", "Super-Ultra-", "Neugeborene(s) ", "Fette(s)-", "Schlonzige(s) ", "Wiederkauende(s)"];
