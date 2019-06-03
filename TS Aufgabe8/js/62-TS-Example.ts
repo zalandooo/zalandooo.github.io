@@ -36,7 +36,7 @@ window.onload = function () {
 }
 
 
-console.log(document.getElementById("monsterSpawner").innerHTML);
+//console.log(document.getElementById("monsterSpawner").innerHTML);   --> Fehlermeldung
 
 
 // Funktionen
@@ -141,8 +141,8 @@ function generateMonsterHitPoints() : number
 
 function generateMonsterXP() : number
 {
-    // Diese Funktion gibt eine zufällige ganze Zahl (zwischen 0 und 350) + 100 zurück.
-    let tempMonsterXP : number = 100 + getRNGNumber(350);
+    // Diese Funktion gibt eine zufällige ganze Zahl (zwischen 0 und 550) + 100 zurück.
+    let tempMonsterXP : number = 100 + getRNGNumber(850);
     return tempMonsterXP;
 }
 
@@ -189,7 +189,8 @@ function fightMonster(_index : number)
     console.log("Das Monster weigert sich zu verschwinden.");                       // Wird nächste Stunde erweitert.
     
     playerXP += monsterArray[_index - 1].monsterExperience;                 	    // _index ist in diesem Fall die Länge des Arrays - allerdings zählt der Computer beginnend von null, nicht eins! Deshalb _index-1.
-
+    monsterArray = [];
+    document.getElementById("monsterHoldingCell").innerHTML = "Du Loserbitch";
     updatePlayerLevel();
 }
 

@@ -19,7 +19,7 @@ window.onload = function () {
     document.getElementById("monsterSpawner").addEventListener("click", generateMonster, false);
     updatePlayerLevel();
 };
-console.log(document.getElementById("monsterSpawner").innerHTML);
+//console.log(document.getElementById("monsterSpawner").innerHTML);   --> Fehlermeldung
 // Funktionen
 function generateMonster() {
     let newMonsterWeapon = generatedMonsterWeapon();
@@ -91,8 +91,8 @@ function generateMonsterHitPoints() {
     return tempMonsterHP;
 }
 function generateMonsterXP() {
-    // Diese Funktion gibt eine zufällige ganze Zahl (zwischen 0 und 350) + 100 zurück.
-    let tempMonsterXP = 100 + getRNGNumber(350);
+    // Diese Funktion gibt eine zufällige ganze Zahl (zwischen 0 und 550) + 100 zurück.
+    let tempMonsterXP = 100 + getRNGNumber(850);
     return tempMonsterXP;
 }
 function generateMonsterModifer() {
@@ -122,6 +122,8 @@ function fightMonster(_index) {
     console.log("Spieler kämpft gegen Monster und gewinnt!"); // Ohne Logik mit if/else ist so etwas wie ein Kampf nicht leicht umzusetzen.
     console.log("Das Monster weigert sich zu verschwinden."); // Wird nächste Stunde erweitert.
     playerXP += monsterArray[_index - 1].monsterExperience; // _index ist in diesem Fall die Länge des Arrays - allerdings zählt der Computer beginnend von null, nicht eins! Deshalb _index-1.
+    monsterArray = [];
+    document.getElementById("monsterHoldingCell").innerHTML = "Du Loserbitch";
     updatePlayerLevel();
 }
 // Aufgerufen, um das HTML-Element, welches das Spieler-Level darstellt, zu erneuern.
