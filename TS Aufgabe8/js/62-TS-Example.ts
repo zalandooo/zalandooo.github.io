@@ -12,7 +12,7 @@ interface Monster {
 // Variablen
 let monsterHolder : string = "monsterHoldingCell";                                 
 let playerName : string = "Spielername";                                           
-let playerXP : number = 0;                                                          
+let playerXP : number = 0;  //Fehler: Fehlender Wert                                                     
 let playerXPperLevel : number = 999;                                                
 let playerItems : string = "Laser-Nagelknipser"
 
@@ -106,7 +106,7 @@ function monsterGenerateHTML()
 // Muss mit einer Zahl aufgerufen werden: getRNGNumber(5); // Liefert eine ganze Zahl zwischen 0 bis 4 zurück.
 function getRNGNumber(_maxNumber : number) : number
 {
-    return Math.floor(Math.random() * _maxNumber);                  // Macht folgendes:...
+    return Math.floor(Math.random() * _maxNumber);                  // Macht folgendes:... // Fehler
 }
 
 

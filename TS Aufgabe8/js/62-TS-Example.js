@@ -1,7 +1,7 @@
 // Variablen
 let monsterHolder = "monsterHoldingCell";
 let playerName = "Spielername";
-let playerXP = 0;
+let playerXP = 0; //Fehler: Fehlender Wert                                                     
 let playerXPperLevel = 999;
 let playerItems = "Laser-Nagelknipser";
 // Arrays
@@ -70,7 +70,7 @@ function monsterGenerateHTML() {
 // [ ] Optionale Aufgabe: verkleinere diesen Code auf eine Zeile mit nur einem Semikolon!
 // Muss mit einer Zahl aufgerufen werden: getRNGNumber(5); // Liefert eine ganze Zahl zwischen 0 bis 4 zurück.
 function getRNGNumber(_maxNumber) {
-    return Math.floor(Math.random() * _maxNumber); // Macht folgendes:...
+    return Math.floor(Math.random() * _maxNumber); // Macht folgendes:... // Fehler
 }
 function generateMonsterName() {
     let generatedMonsterName = ""; // Leerer String erstellt
