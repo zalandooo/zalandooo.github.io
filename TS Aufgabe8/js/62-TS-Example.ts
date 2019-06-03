@@ -190,7 +190,7 @@ function fightMonster(_index : number)
     
     playerXP += monsterArray[_index - 1].monsterExperience;                 	    // _index ist in diesem Fall die Länge des Arrays - allerdings zählt der Computer beginnend von null, nicht eins! Deshalb _index-1.
     monsterArray = [];
-    document.getElementById("monsterHoldingCell").innerHTML = "Du Loserbitch";
+    document.getElementById("monsterHoldingCell").innerHTML = "STRENG DICH AN BUBBELE";
     updatePlayerLevel();
 }
 
