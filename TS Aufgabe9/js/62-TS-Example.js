@@ -23,36 +23,37 @@ window.onload = function () {
 };
 // Funktionen
 function generateMonster() {
-    let newMonsterWeapon = generatedMonsterWeapon();
-    let newImage;
-    let newMonsterName = generateMonsterName();
-    let newMonsterHP = generateMonsterHealthPoints();
-    let newMonsterXP = generateMonsterXP();
-    let newMonsterModifier = generateMonsterModifer();
-    let newMonster = {
-        monsterImage: newImage,
-        monsterWeapon: newMonsterWeapon,
-        monsterName: newMonsterName,
-        monsterHealthPoints: newMonsterHP,
-        monsterExperience: newMonsterXP,
-        monsterModifier: newMonsterModifier,
-    };
-    monsterArray.push(newMonster);
-    if (monsterArray.length != 0) {
-        console.log(monsterArray[monsterArray.length - 1].monsterExperience);
+    for (let i = getRNGNumber(3); i < 3; i++)
+        ; //NEU//NEU//NEU
+    {
+        let newMonsterWeapon = generatedMonsterWeapon();
+        let newImage;
+        let newMonsterName = generateMonsterName();
+        let newMonsterHP = generateMonsterHealthPoints();
+        let newMonsterXP = generateMonsterXP();
+        let newMonsterModifier = generateMonsterModifer();
+        let newMonster = {
+            monsterImage: newImage,
+            monsterWeapon: newMonsterWeapon,
+            monsterName: newMonsterName,
+            monsterHealthPoints: newMonsterHP,
+            monsterExperience: newMonsterXP,
+            monsterModifier: newMonsterModifier,
+        };
+        monsterArray.push(newMonster);
+        updateHTML(); //NEU//NEU//NEU
     }
-    monsterGenerateHTML();
 }
-function monsterGenerateHTML() {
+function monsterGenerateHTML(Operator) {
     let holdingDiv = document.createElement("div");
-    holdingDiv.setAttribute("id", "monster" + monsterArray.length);
+    holdingDiv.setAttribute("id", "monster" + Operator);
     holdingDiv.setAttribute("class", "monster");
     document.getElementById(monsterHolder).appendChild(holdingDiv);
     let monsterName = document.createElement("p");
-    monsterName.innerHTML = monsterArray[monsterArray.length - 1].monsterName;
+    monsterName.innerHTML = monsterArray[Operator - 1].monsterName;
     holdingDiv.appendChild(monsterName);
     let monsterMod = document.createElement("p");
-    monsterMod.innerHTML = monsterArray[monsterArray.length - 1].monsterModifier[0] + ", " + monsterArray[monsterArray.length - 1].monsterModifier[1];
+    monsterMod.innerHTML = monsterArray[Operator - 1].monsterModifier[0] + ", " + monsterArray[Operator - 1].monsterModifier[1];
     holdingDiv.appendChild(monsterMod);
     let monsterImg = document.createElement("img");
     monsterImg.setAttribute("src", Images[generatedImage()]);
@@ -61,10 +62,10 @@ function monsterGenerateHTML() {
     let monsterBtn = document.createElement("BUTTON");
     monsterBtn.innerHTML = "Monster zermalmen!";
     holdingDiv.appendChild(monsterBtn);
-    let monsterCount = monsterArray.length;
+    let monsterCount = Operator;
     console.log("Aktuelle Anzahl an Monstern: " + monsterCount);
-    let monsterWeapon = document.createElement("p");
-    monsterWeapon.innerHTML = monsterArray[monsterArray.length - 1].monsterWeapon;
+    let monsterWeapon = document.createElement("p"); //NEU//NEU//NEU
+    monsterWeapon.innerHTML = monsterArray[monsterCount - 1].monsterWeapon;
     holdingDiv.appendChild(monsterWeapon);
     monsterBtn.addEventListener('click', function () {
         fightMonster(monsterCount);
@@ -131,6 +132,7 @@ function fightMonster(_index) {
     monsterArray = [];
     document.getElementById("monsterHoldingCell").innerHTML = "";
     updatePlayerLevel();
+    updateHTML();
 }
 // Aufgerufen, um das HTML-Element, welches das Spieler-Level darstellt, zu erneuern.
 function updatePlayerLevel() {
@@ -141,9 +143,32 @@ function updatePlayerLevel() {
     document.getElementById("hpCounter").innerHTML = "Player-HP: " + points + " (HP: " + playerHP + " / " + playerHPperLevel + ")";
     console.log("Spieler " + playerName + " hat nun Lebenspunkte " + points + " mit " + playerHP + " (" + playerHPperLevel + " pro Level)");
 }
+////NEUES////NEUES////NEUES////NEUES////NEUES////NEUES////NEUES////NEUES////NEUES////NEUES////NEUES////NEUES////NEUES////NEUES////NEUES////NEUES////NEUES////NEUES////NEUES////NEUES////NEUES//
+function monsterGenerateHTMLAll() {
+    for (let i = 1; i <= monsterArray.length; i++) {
+        monsterGenerateHTML(i);
+    }
+}
+function clearMonsterCell() {
+    let monsterZelle = document.getElementById("monsterHoldingCell");
+    let children = monsterZelle.children;
+    let childCount = children.length;
+    for (i = 0; i < childCount; i++) {
+        if (monsterZelle.firstElementChild != null)
+            monsterZelle.removeChild(monsterZelle.firstElementChild);
+    }
+}
+function updateHTML() {
+    clearMonsterCell();
+    monsterGenerateHTMLAll();
+    getMonsterCount();
+}
+function getMonsterCount() {
+    return monsterArray.length;
+}
 // Schleifen 
-var monstersTotal = 15;
-for (var i = 0; i <= monstersTotal; i++) {
+var monsterHoldingCell = 15;
+for (var i = 0; i <= monsterHoldingCell; i++) {
     console.log("Ich habe " + i + "Zähne/Zahn, die/der dich zerfleischen/piekst");
 }
 //# sourceMappingURL=62-TS-Example.js.map
