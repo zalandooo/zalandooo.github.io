@@ -196,20 +196,17 @@ function fightMonster(_index : number)
     //else? 
     console.log("Spieler kämpft gegen Monster und gewinnt!");                       // Ohne Logik mit if/else ist so etwas wie ein Kampf nicht leicht umzusetzen.
     console.log("Das Monster weigert sich zu verschwinden.");                       // Wird nächste Stunde erweitert.
-    console.log(_index);
-
+    
     playerHP += monsterArray[_index - 1].monsterHealthPoints;  
-    monsterArray = [];
     document.getElementById("monsterHoldingCell").innerHTML = "";
     monsterArray.splice(_index - 1, 1);
     updatePlayerLevel();
 
-    playerXP += monsterArray[_index - 1].monsterExperience;                 	    // _index ist in diesem Fall die Länge des Arrays - allerdings zählt der Computer beginnend von null, nicht eins! Deshalb _index-1.
-    monsterArray = [];
-    document.getElementById("monsterHoldingCell").innerHTML = "";
-    monsterArray.splice(_index - 1, 1);
-    updatePlayerLevel();
-
+    //playerXP += monsterArray[_index - 1].monsterExperience;                 	    // _index ist in diesem Fall die Länge des Arrays - allerdings zählt der Computer beginnend von null, nicht eins! Deshalb _index-1.
+    //monsterArray = [];
+    //document.getElementById("monsterHoldingCell").innerHTML = "";
+   // monsterArray.splice(_index - 1, 1);
+   // updatePlayerLevel();
 
     updateHTML();
 }
@@ -242,30 +239,24 @@ function monsterGenerateHTMLAll()
 
 function clearMonsterCell()
 {
-    let monsterZelle : HTMLElement = document.getElementById("monsterHoldingCell");
-    let children : HTMLCollection = monsterZelle.children;
-    let childCount : number = children.length;
-    
-    for (i = 0; i < childCount; i++) {                    
-        if (monsterZelle.firstElementChild != null)              
-        monsterZelle.removeChild(monsterZelle.firstElementChild);}
+    let monsterCell = document.getElementById("monsterHoldingCell");
+    if (monsterCell.hasChildNodes) 
+    {
+        while (monsterCell.firstChild) 
+        {
+            monsterCell.removeChild(monsterCell.firstChild);
+        } 
+    }
 }
 
 function updateHTML()
 {
     clearMonsterCell();
     monsterGenerateHTMLAll();
-    console.log(getMonsterCount());
+    getOperator();
 }
 
-function getMonsterCount()
+function getOperator()
 {
     return monsterArray.length;
-}
-
-// Schleifen 
-var monsterHoldingCell : number = 15;
-for (var i : number = 0; i <= monsterHoldingCell; i++)
-{
-    console.log ("Ich habe " + i + "Zähne/Zahn, die/der dich zerfleischen/piekst");
 }
