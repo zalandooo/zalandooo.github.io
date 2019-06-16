@@ -16,7 +16,7 @@ let playerXP : number = 0;
 let playerXPperLevel : number = 999;                                                
 let playerItems : string = "Laser-Nagelknipser"
 let playerHP : number = 0;
-let playerHPperLevel : number = 9999;
+let playerHPperLevel : number = 1998;
 
 // Arrays
 let prefix : string[] = ["Gurkengesichtige(s)-", "Toastessende(s)-", "Frühstücks-", "Mega-", "Super-Ultra-", "Neugeborene(s) ", "Fette(s)-", "Schlonzige(s) ", "Wiederkauende(s)"];
@@ -42,15 +42,18 @@ window.onload = function () {
 
 // Funktionen
 function generateMonster()
-{
-    for (let i: number = getRNGNumber(3); i < 3; i++);       //NEU//NEU//NEU
+{   let monsterNumber = getRNGNumber(3) + 1;     //NEU//NEU//NEU
+
+
+    for (let i = 0; i < monsterNumber; i++)      //NEU//NEU//NEU
     {
-    let newMonsterWeapon : string = generatedMonsterWeapon();
-    let newImage: string ; 
-    let newMonsterName : string = generateMonsterName();              
-    let newMonsterHP : number = generateMonsterHealthPoints();         
-    let newMonsterXP : number = generateMonsterXP();                   
-    let newMonsterModifier : string[] = generateMonsterModifer();      
+     let newMonsterWeapon : string = generatedMonsterWeapon();
+     let newImage: string ; 
+     let newMonsterName : string = generateMonsterName();              
+     let newMonsterHP : number = generateMonsterHealthPoints();         
+     let newMonsterXP : number = generateMonsterXP();                   
+     let newMonsterModifier : string[] = generateMonsterModifer();      
+
 
     let newMonster : Monster = 
     {     
@@ -147,11 +150,16 @@ function generateMonsterHitPoints() : number
 
 function generateMonsterXP() : number
 {
-    // Diese Funktion gibt eine zufällige ganze Zahl (zwischen 0 und 550) + 100 zurück.
+    // Diese Funktion gibt eine zufällige ganze Zahl (zwischen 0 und 850) + 100 zurück.
     let tempMonsterXP : number = 100 + getRNGNumber(850);
     return tempMonsterXP;
 }
 
+function generateMonsterHealthPoints() : number
+{
+    let tempMonsterHP : number = 333;
+    return tempMonsterHP;
+}
 
 function generateMonsterModifer() : string[]
 {
@@ -161,12 +169,6 @@ function generateMonsterModifer() : string[]
     return tempMonsterMod;                                                      // Gebe das hier zusammengesetzte Array wieder zurück.
 }
 
-
-function generateMonsterHealthPoints() : number
-{
-    let tempMonsterHP : number = 1 + getRNGNumber(10);
-    return tempMonsterHP;
-}
 
 
 // Generiert eine zufällige Waffe für das Monster
@@ -182,7 +184,7 @@ function generatedMonsterWeapon() : string
 function generatedImage()           
 {
     let tempImage : number = getRNGNumber(Images.length);
-    return tempImage;
+    return tempImage;   
 }
 
 
@@ -190,19 +192,24 @@ function generatedImage()
 // Der Spieler kämpft gegen das entsprechende Monster. Er erhält dann Erfahrungspunkte.
 function fightMonster(_index : number)
 {
-
+    //if?
+    //else? 
     console.log("Spieler kämpft gegen Monster und gewinnt!");                       // Ohne Logik mit if/else ist so etwas wie ein Kampf nicht leicht umzusetzen.
     console.log("Das Monster weigert sich zu verschwinden.");                       // Wird nächste Stunde erweitert.
-    
+    console.log(_index);
+
+    playerHP += monsterArray[_index - 1].monsterHealthPoints;  
+    monsterArray = [];
+    document.getElementById("monsterHoldingCell").innerHTML = "";
+    monsterArray.splice(_index - 1, 1);
+    updatePlayerLevel();
+
     playerXP += monsterArray[_index - 1].monsterExperience;                 	    // _index ist in diesem Fall die Länge des Arrays - allerdings zählt der Computer beginnend von null, nicht eins! Deshalb _index-1.
     monsterArray = [];
     document.getElementById("monsterHoldingCell").innerHTML = "";
+    monsterArray.splice(_index - 1, 1);
     updatePlayerLevel();
 
-    playerHP += monsterArray[_index - 1].monsterHealthPoints                	    // _index ist in diesem Fall die Länge des Arrays - allerdings zählt der Computer beginnend von null, nicht eins! Deshalb _index-1.
-    monsterArray = [];
-    document.getElementById("monsterHoldingCell").innerHTML = "";
-    updatePlayerLevel();
 
     updateHTML();
 }
@@ -215,10 +222,10 @@ function updatePlayerLevel()
     document.getElementById("xpCounter").innerHTML = "Player-Level: " + tempLevel + " (XP: " + playerXP + " / " + playerXPperLevel + ")";       // Baue den String für die Spieler-Info zusammen
     console.log("Spieler " + playerName + " hat nun Level " + tempLevel + " mit " + playerXP + " (" + playerXPperLevel + " pro Level)");        // Spieler-Level in der Konsole.
 
-    let points : number = Math.floor(playerHP / playerHPperLevel);
+    let tempPoints : number = Math.floor(playerHP / playerHPperLevel);
 
-    document.getElementById("hpCounter").innerHTML = "Player-HP: " + points+ " (HP: " + playerHP + " / " + playerHPperLevel + ")";
-    console.log("Spieler " + playerName + " hat nun Lebenspunkte " + points + " mit " + playerHP + " (" + playerHPperLevel + " pro Level)");
+    document.getElementById("hpCounter").innerHTML = "Player-Lifes: +" + tempPoints+ " (HP: " + playerHP + " / " + playerHPperLevel + ")";
+    console.log("Spieler " + playerName + " hat nun " + playerHP + " Lebenspunkte" + " (" + playerHPperLevel + " pro Level)");
 }
 
 
@@ -248,7 +255,7 @@ function updateHTML()
 {
     clearMonsterCell();
     monsterGenerateHTMLAll();
-    getMonsterCount();
+    console.log(getMonsterCount());
 }
 
 function getMonsterCount()

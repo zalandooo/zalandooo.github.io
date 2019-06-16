@@ -2,7 +2,8 @@
 /* Einbettung font */ 
 @import url('https://fonts.googleapis.com/css?family=Courgette');
 
-/* Basic Styles */
+/* Basic Styles */ 
+
 body {
 	font-size: 1.0em;
 	font-family: "Calibri";
@@ -16,7 +17,7 @@ button > img {
 h1 {
 	text-align: center;
 	margin-top: 1.5em;
-	background-color: rgb(60, 255, 0);
+	background-color: #ffd000;
 }
 
 .monster {
@@ -64,7 +65,8 @@ button {
   padding: 1em;
   overflow: hidden;
 
-	display: inline-block;
+  /*display: inline-block;*/
+
   width:10em; 	
 
   border-width: 0;
@@ -75,8 +77,12 @@ button {
   background-color: #ff0000;
   color: #ecf0f1;
   
-  margin: -4em 0em 0em 27.3em;
-	text-align: center;
+  align-self: center;
+  text-align: center;
+
+  display: block;
+    margin-left: auto;
+    margin-right: auto;
   
 }
 

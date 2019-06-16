@@ -5,7 +5,7 @@ let playerXP = 0;
 let playerXPperLevel = 999;
 let playerItems = "Laser-Nagelknipser";
 let playerHP = 0;
-let playerHPperLevel = 9999;
+let playerHPperLevel = 1998;
 // Arrays
 let prefix = ["Gurkengesichtige(s)-", "Toastessende(s)-", "Frühstücks-", "Mega-", "Super-Ultra-", "Neugeborene(s) ", "Fette(s)-", "Schlonzige(s) ", "Wiederkauende(s)"];
 let monsterName = ["Zwiebel", "Dönertier", "Brillenschlange", "Trump", "Obunga", "Pickle Rick", "Morty", "Japaner", "Money Boy", "Hagrid", "Fresh D"];
@@ -23,9 +23,9 @@ window.onload = function () {
 };
 // Funktionen
 function generateMonster() {
-    for (let i = getRNGNumber(3); i < 3; i++)
-        ; //NEU//NEU//NEU
-    {
+    let monsterNumber = getRNGNumber(3) + 1; //NEU//NEU//NEU
+    for (let i = 0; i < monsterNumber; i++) //NEU//NEU//NEU
+     {
         let newMonsterWeapon = generatedMonsterWeapon();
         let newImage;
         let newMonsterName = generateMonsterName();
@@ -94,19 +94,19 @@ function generateMonsterHitPoints() {
     return tempMonsterHP;
 }
 function generateMonsterXP() {
-    // Diese Funktion gibt eine zufällige ganze Zahl (zwischen 0 und 550) + 100 zurück.
+    // Diese Funktion gibt eine zufällige ganze Zahl (zwischen 0 und 850) + 100 zurück.
     let tempMonsterXP = 100 + getRNGNumber(850);
     return tempMonsterXP;
+}
+function generateMonsterHealthPoints() {
+    let tempMonsterHP = 333;
+    return tempMonsterHP;
 }
 function generateMonsterModifer() {
     let tempMonsterMod = []; // Initialisiere ein leeres Array (verhindert Folge-Fehler)
     tempMonsterMod[0] = monsterModifers[getRNGNumber(monsterModifers.length)]; // Setze Schublade 0 des Arrays auf einen Wert.
     tempMonsterMod[1] = monsterModifers[getRNGNumber(monsterModifers.length)]; // Setze Schublade 1 des Arrays auf einen Wert.
     return tempMonsterMod; // Gebe das hier zusammengesetzte Array wieder zurück.
-}
-function generateMonsterHealthPoints() {
-    let tempMonsterHP = 1 + getRNGNumber(10);
-    return tempMonsterHP;
 }
 // Generiert eine zufällige Waffe für das Monster
 function generatedMonsterWeapon() {
@@ -122,15 +122,20 @@ function generatedImage() {
 // Aufgerufen, wenn man auf den Button klickt.
 // Der Spieler kämpft gegen das entsprechende Monster. Er erhält dann Erfahrungspunkte.
 function fightMonster(_index) {
+    //if?
+    //else? 
     console.log("Spieler kämpft gegen Monster und gewinnt!"); // Ohne Logik mit if/else ist so etwas wie ein Kampf nicht leicht umzusetzen.
     console.log("Das Monster weigert sich zu verschwinden."); // Wird nächste Stunde erweitert.
+    console.log(_index);
+    playerHP += monsterArray[_index - 1].monsterHealthPoints;
+    monsterArray = [];
+    document.getElementById("monsterHoldingCell").innerHTML = "";
+    monsterArray.splice(_index - 1, 1);
+    updatePlayerLevel();
     playerXP += monsterArray[_index - 1].monsterExperience; // _index ist in diesem Fall die Länge des Arrays - allerdings zählt der Computer beginnend von null, nicht eins! Deshalb _index-1.
     monsterArray = [];
     document.getElementById("monsterHoldingCell").innerHTML = "";
-    updatePlayerLevel();
-    playerHP += monsterArray[_index - 1].monsterHealthPoints; // _index ist in diesem Fall die Länge des Arrays - allerdings zählt der Computer beginnend von null, nicht eins! Deshalb _index-1.
-    monsterArray = [];
-    document.getElementById("monsterHoldingCell").innerHTML = "";
+    monsterArray.splice(_index - 1, 1);
     updatePlayerLevel();
     updateHTML();
 }
@@ -139,9 +144,9 @@ function updatePlayerLevel() {
     let tempLevel = Math.floor(playerXP / playerXPperLevel); // Spieler-Level = XP / XPproLevel
     document.getElementById("xpCounter").innerHTML = "Player-Level: " + tempLevel + " (XP: " + playerXP + " / " + playerXPperLevel + ")"; // Baue den String für die Spieler-Info zusammen
     console.log("Spieler " + playerName + " hat nun Level " + tempLevel + " mit " + playerXP + " (" + playerXPperLevel + " pro Level)"); // Spieler-Level in der Konsole.
-    let points = Math.floor(playerHP / playerHPperLevel);
-    document.getElementById("hpCounter").innerHTML = "Player-HP: " + points + " (HP: " + playerHP + " / " + playerHPperLevel + ")";
-    console.log("Spieler " + playerName + " hat nun Lebenspunkte " + points + " mit " + playerHP + " (" + playerHPperLevel + " pro Level)");
+    let tempPoints = Math.floor(playerHP / playerHPperLevel);
+    document.getElementById("hpCounter").innerHTML = "Player-Lifes: +" + tempPoints + " (HP: " + playerHP + " / " + playerHPperLevel + ")";
+    console.log("Spieler " + playerName + " hat nun " + playerHP + " Lebenspunkte" + " (" + playerHPperLevel + " pro Level)");
 }
 ////NEUES////NEUES////NEUES////NEUES////NEUES////NEUES////NEUES////NEUES////NEUES////NEUES////NEUES////NEUES////NEUES////NEUES////NEUES////NEUES////NEUES////NEUES////NEUES////NEUES////NEUES//
 function monsterGenerateHTMLAll() {
@@ -161,7 +166,7 @@ function clearMonsterCell() {
 function updateHTML() {
     clearMonsterCell();
     monsterGenerateHTMLAll();
-    getMonsterCount();
+    console.log(getMonsterCount());
 }
 function getMonsterCount() {
     return monsterArray.length;
