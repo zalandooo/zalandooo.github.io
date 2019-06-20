@@ -1,0 +1,107 @@
+/* css für Codebeispiel 30 */
+/* Einbettung font */ 
+@import url('https://fonts.googleapis.com/css?family=Courgette');
+
+/* Basic Styles */ 
+
+body {
+	font-size: 1.0em;
+	font-family: "Calibri";
+	color: #050047
+}
+
+button > img {
+	margin: 0.5em auto;
+}
+
+h1 {
+	text-align: center;
+	margin-top: 1.5em;
+	background-color: #ffd000;
+}
+
+.monster {
+	width: 10em;
+	margin: 1em
+}
+
+.monster img {
+	width: 100%;
+}
+
+.monster button {
+	text-align: center;
+	display: block;
+	margin: auto;
+	color: black;
+	width: 7em
+}
+
+.monster p {
+	text-align: center;
+	display: block;
+	margin: auto;
+}
+
+.monster p+p
+{
+  font-size: 0.6em;
+}
+
+main div {
+	display: inline-block;
+}
+
+/*
+main > div > img {
+	width: 100%;
+}
+*/
+
+button {
+
+  font-family: 	"Calibri";
+  font-size: 1.2em;	
+  padding: 1em;
+  overflow: hidden;
+
+  /*display: inline-block;*/
+
+  width:10em; 	
+
+  border-width: 0;
+  outline: none;
+  border-radius: 2px;
+  box-shadow: 0 1px 4px rgba(37, 37, 37, 0.6);
+  
+  background-color: #ff0000;
+  color: #ecf0f1;
+  
+  align-self: center;
+  text-align: center;
+
+  display: block;
+    margin-left: auto;
+    margin-right: auto;
+  
+}
+
+#button-green {
+	background-color: #2ecc71;
+}
+
+#button-red {
+	background-color: #cc2e69;
+}
+
+footer {
+	position: absolute; 
+	bottom: 0.5em; 
+	margin: 500em 0em 0em 0em;
+	right: 1em;
+}
+
+footer a {
+	color: #ddd;
+	text-decoration: none;
+}
