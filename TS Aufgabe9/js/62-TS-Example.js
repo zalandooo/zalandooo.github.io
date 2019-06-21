@@ -27,7 +27,7 @@ function generateMonster() {
     for (let i = 0; i < monsterNumber; i++) //NEU//NEU//NEU
      {
         let newMonsterWeapon = generatedMonsterWeapon();
-        let newImage;
+        let newImage = Images[generatedImage()];
         let newMonsterName = generateMonsterName();
         let newMonsterHP = generateMonsterHealthPoints();
         let newMonsterXP = generateMonsterXP();
@@ -50,13 +50,13 @@ function monsterGenerateHTML(Operator) {
     holdingDiv.setAttribute("class", "monster");
     document.getElementById(monsterHolder).appendChild(holdingDiv);
     let monsterName = document.createElement("p");
-    monsterName.innerHTML = monsterArray[Operator - 1].monsterName;
+    monsterName.innerHTML = monsterArray[Operator].monsterName;
     holdingDiv.appendChild(monsterName);
     let monsterMod = document.createElement("p");
-    monsterMod.innerHTML = monsterArray[Operator - 1].monsterModifier[0] + ", " + monsterArray[Operator - 1].monsterModifier[1];
+    monsterMod.innerHTML = monsterArray[Operator].monsterModifier[0] + ", " + monsterArray[Operator].monsterModifier[1];
     holdingDiv.appendChild(monsterMod);
     let monsterImg = document.createElement("img");
-    monsterImg.setAttribute("src", Images[generatedImage()]);
+    monsterImg.setAttribute("src", monsterArray[Operator].monsterImage);
     monsterImg.setAttribute("alt", "Schreckliches Monster");
     holdingDiv.appendChild(monsterImg);
     let monsterBtn = document.createElement("BUTTON");
@@ -65,7 +65,7 @@ function monsterGenerateHTML(Operator) {
     let monsterCount = Operator;
     console.log("Aktuelle Anzahl an Monstern: " + monsterCount);
     let monsterWeapon = document.createElement("p"); //NEU//NEU//NEU
-    monsterWeapon.innerHTML = monsterArray[monsterCount - 1].monsterWeapon;
+    monsterWeapon.innerHTML = monsterArray[monsterCount].monsterWeapon;
     holdingDiv.appendChild(monsterWeapon);
     monsterBtn.addEventListener('click', function () {
         fightMonster(monsterCount);
@@ -126,15 +126,11 @@ function fightMonster(_index) {
     //else? 
     console.log("Spieler kämpft gegen Monster und gewinnt!"); // Ohne Logik mit if/else ist so etwas wie ein Kampf nicht leicht umzusetzen.
     console.log("Das Monster weigert sich zu verschwinden."); // Wird nächste Stunde erweitert.
-    playerHP += monsterArray[_index - 1].monsterHealthPoints;
-    document.getElementById("monsterHoldingCell").innerHTML = "";
-    monsterArray.splice(_index - 1, 1);
+    playerHP += monsterArray[_index].monsterHealthPoints;
+    monsterArray.splice(_index, 1);
     updatePlayerLevel();
-    //playerXP += monsterArray[_index - 1].monsterExperience;                 	    // _index ist in diesem Fall die Länge des Arrays - allerdings zählt der Computer beginnend von null, nicht eins! Deshalb _index-1.
-    //monsterArray = [];
-    //document.getElementById("monsterHoldingCell").innerHTML = "";
-    // monsterArray.splice(_index - 1, 1);
-    // updatePlayerLevel();
+    playerXP += monsterArray[_index - 1].monsterExperience; // _index ist in diesem Fall die Länge des Arrays - allerdings zählt der Computer beginnend von null, nicht eins! Deshalb _index-1.
+    updatePlayerLevel();
     updateHTML();
 }
 // Aufgerufen, um das HTML-Element, welches das Spieler-Level darstellt, zu erneuern.

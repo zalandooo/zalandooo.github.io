@@ -34,7 +34,8 @@ h1 {
 	display: block;
 	margin: auto;
 	color: black;
-	width: 7em
+	width: 7em;
+	float: left;
 }
 
 .monster p {
@@ -72,7 +73,7 @@ button {
   border-width: 0;
   outline: none;
   border-radius: 2px;
-  box-shadow: 0 1px 4px rgba(37, 37, 37, 0.6);
+  box-shadow: 0 0px 4px rgba(37, 37, 37, 0.6);
   
   background-color: #ff0000;
   color: #ecf0f1;
@@ -80,11 +81,12 @@ button {
   align-self: center;
   text-align: center;
 
-  display: block;
-    margin-left: auto;
-    margin-right: auto;
+  
+    margin-left: 2.5em;
+    margin-right: 2em;
   
 }
+
 
 #button-green {
 	background-color: #2ecc71;
