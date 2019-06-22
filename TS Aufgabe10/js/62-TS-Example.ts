@@ -15,10 +15,10 @@ interface Monster {
 let monsterHolder : string = "monsterHoldingCell";      
 let playerName : string = "Spielername";                                           
 let playerXP : number = 999+999;                                                      
-let playerXPperLevel : number = 999;                                                
+let playerXPperLevel : number = 500;                                                
 let playerItems : string = "Laser-Nagelknipser"
 let playerHP : number = 0;
-let playerHPperLevel : number = 1998;
+let playerHPperLevel : number = 1000;
 
 // Arrays
 let prefix : string[] = ["Gurkengesichtige(s)-", "Toastessende(s)-", "Frühstücks-", "Mega-", "Super-Ultra-", "Neugeborene(s) ", "Fette(s)-", "Schlonzige(s) ", "Wiederkauende(s)"];
@@ -90,7 +90,7 @@ function monsterGenerateHTML(Operator : number)
 
     let monsterName : HTMLElement = document.createElement("p");      
     monsterName.innerHTML = monsterArray[Operator].monsterName;                
-    holdingDiv.appendChild(monsterName);                               
+    holdingDiv.appendChild(monsterName);                        
 
     let monsterMod : HTMLElement = document.createElement("p");      
     monsterMod.innerHTML = monsterArray[Operator].monsterModifier[0] + ", " +  monsterArray[Operator].monsterModifier[1];
@@ -100,10 +100,6 @@ function monsterGenerateHTML(Operator : number)
     monsterImg.setAttribute("src", monsterArray[Operator].monsterImage);                
     monsterImg.setAttribute("alt", "Schreckliches Monster");                        
     holdingDiv.appendChild(monsterImg);                                 
-
-    let monsterBtn : HTMLElement = document.createElement("BUTTON");    
-    monsterBtn.innerHTML = "Monster zermalmen!";                        
-    holdingDiv.appendChild(monsterBtn);                                 
 
     let monsterCount : number = Operator;                    
     console.log("Aktuelle Anzahl an Monstern: " + monsterCount);
@@ -115,6 +111,10 @@ function monsterGenerateHTML(Operator : number)
     let tempMonsterLevel : HTMLElement = document.createElement("p");                            //NEU//NEU//NEU//NEU//NEU//NEU
     tempMonsterLevel.innerHTML = "Monster Level: " + monsterArray[Operator].monsterLevel;        //Monster-Level-Darstellung    
     holdingDiv.appendChild(tempMonsterLevel);
+
+    let monsterBtn : HTMLElement = document.createElement("BUTTON");    
+    monsterBtn.innerHTML = "Monster zermalmen!";                        
+    holdingDiv.appendChild(monsterBtn);                                 
 
     monsterBtn.addEventListener(                                      
         'click', function() {                                         
@@ -159,6 +159,7 @@ function generateMonsterHealthPoints() : number
     let tempMonsterHP : number = 333;
     return tempMonsterHP;
 }
+
 
 function generateMonsterModifer() : string[]
 {
@@ -222,6 +223,8 @@ function getOperator()
 
 ////NEUES////NEUES////NEUES////NEUES////NEUES////NEUES////NEUES////NEUES////NEUES////NEUES////NEUES////NEUES////NEUES////NEUES////NEUES////NEUES////NEUES////NEUES////NEUES////NEUES////NEUES//
 
+//ERWEITERTE FUNKTIONEN
+
 function fightMonster(_index : number)                                     
 {
     if (monsterArray[_index].monsterLevel < tempPlayerLevel) {               //NEU//NEU//NEU//NEU//NEU//NEU
@@ -229,9 +232,9 @@ function fightMonster(_index : number)
         updatePlayerLevel(monsterArray[_index].monsterExperience);
         monsterArray.splice(_index, 1);
     } else 
-    {
+     {
         updatePlayerLevel(- monsterArray[_index].monsterExperience);        //falls das Monster durch einen der Monster-Bekämpfen-Buttons nicht getötet werden konnte, weil das Level zu niedrig war, werden hierdurch XP-Points vom Spieler abgezogen
-    }
+     }
 
 
     
@@ -313,9 +316,9 @@ function fightWeakestMonster()      //bekämpft (und löscht) das schwächste Mo
                 index = i;
                 theWeakest = monsterArray[i].monsterLevel;
          }
-        if (monsterArray[index].monsterLevel < tempPlayerLevel) 
-        {
+         else (monsterArray[index].monsterLevel < tempPlayerLevel) 
+         {
             fightMonster(index);
-        }
+         }
     }
 }

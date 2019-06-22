@@ -25,9 +25,22 @@ h1 {
 	margin: 1em
 }
 
+.monster p {
+	text-align: center;
+	display: block;
+	margin: auto;
+}
+
+.monster p+p
+{
+  font-size: 0.7em;
+}
+
 .monster img {
 	width: 100%;
 }
+
+
 
 .monster button {
 	text-align: center;
@@ -37,16 +50,7 @@ h1 {
 	width: 7em;
 }
 
-.monster p {
-	text-align: center;
-	display: block;
-	margin: auto;
-}
 
-.monster p+p
-{
-  font-size: 0.6em;
-}
 
 main div {
 	display: inline-block;
